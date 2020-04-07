@@ -21,4 +21,4 @@ paraSelector.forEach( paraSelector => {
     })
 })
 
-
+console.log(paraSelector)
