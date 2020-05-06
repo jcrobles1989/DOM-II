@@ -1,4 +1,4 @@
-// mouseover
+// Your code goes here
 
 const highlightPara = document.getElementsByTagName('p');
 
@@ -70,50 +70,21 @@ function logKey(e) {
   log.textContent += ` ${e.code}`;
 }
 
-keyLog.style.width = '20%';
+const getAll = (selector) => {
+   return document.querySelectorAll(selector)
+}
 
-// mouseenter
+const paraSelector = getAll('p')
 
-const logoChanger = document.querySelector('h1.logo-heading')
+paraSelector.forEach( paraSelector => {
+    
+    paraSelector.addEventListener('mouseenter', function(event) {
+        event.target.style.color = 'turquoise'
+    })
 
-logoChanger.addEventListener('mouseenter', event => {
-    logoChanger.style.border = '3px dotted orange';
-    logoChanger.style.transform = 'scale(2)';
-    logoChanger.style.color = 'orange';
-})
-
-// mouseleave
-
-logoChanger.addEventListener('mouseleave', event => {
-    logoChanger.style.border = '';
-    logoChanger.style.transform = '';
-    logoChanger.style.color = '';
-})
-
-// form 
-
-const formContainer = document.querySelector('.intro')
-const form = document.createElement('form')
-form.style.display = 'flex'
-form.style.justifyContent = 'center'
-
-const firstInput = document.createElement('input')
-firstInput.setAttribute('placeholder', 'name')
-firstInput.style.textAlign = 'center'
-form.append(firstInput)
-formContainer.prepend(form)
-
-// load
-
-const body = document.querySelector('body')
-
-body.addEventListener('load', alert('Hello There'))
-
-// resize 
-
-window.addEventListener('resize', () => {
-    alert(`${window.innerWidth}, ${window.innerHeight}
-Resize Works!`)
+    paraSelector.addEventListener('mouseleave', function(event) {
+        event.target.style.color = ''
+    })
 })
 
 // dblclick

@@ -17,7 +17,11 @@ Fun Bus wants you to make their site more interactive. They are relying on you t
 
 * [x] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo). **Please don't merge your own pull request**
 * [x] Add your project manager as a reviewer on the pull-request
+<<<<<<< HEAD
+* [x] Your project manager will count the project as complete by merging the branch back into master.
+=======
 * [ ] Your project manager will count the project as complete by merging the branch back into master.
+>>>>>>> ca322db35215a46312e41c180f9a4538ed65ddb5
 
 ## Task 1: Set Up LESS Preprocessor
 
