@@ -14,6 +14,20 @@ highlightPara.addEventListener("mouseover", function( event ) {
     }, false);
 })
 
+const highlightNav = document.querySelectorAll('a.nav-link');
+
+Array.from(highlightNav).forEach (highlightNav => {
+
+    highlightNav.addEventListener('mouseover', function(event) {
+        event.target.style.backgroundColor = 'orange'
+    });
+
+})
+
+const tween = TweenLite.to(highlightPara, 1, {
+    width: '40%'
+})
+
 // wheel
 
 function zoom(event) {
@@ -109,3 +123,4 @@ const imgRotate = document.querySelector('.img-content');
 imgRotate.addEventListener('dblclick', () => {
     imgRotate.style.transform = 'rotate(20deg)'
 })
+
